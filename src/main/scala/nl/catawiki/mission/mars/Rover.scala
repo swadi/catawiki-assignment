@@ -4,7 +4,7 @@ class Rover(plateau: Plateau) {
   import Facing._
 
   def movement(move: String, roverPosition: RoverPosition): RoverPosition = {
-    move.foldLeft(roverPosition)((x, y) => performAction(y, x) )
+    move.foldLeft(roverPosition)((roverPos, mov) => performAction(mov, roverPos) )
   }
 
   private def movePosition(roverPosition: RoverPosition): RoverPosition = {
